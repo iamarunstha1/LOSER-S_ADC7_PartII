@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'faceofnepal',
+    'Login',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +58,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            'faceofnepal/template'
+            'faceofnepal/template',
+            'Login/template'
         ],
         'APP_DIRS': True,
         'OPTIONS': {
