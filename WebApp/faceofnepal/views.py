@@ -34,7 +34,7 @@ def freelancer_list(request):
 def freelancer_edit(request, ID):
     freelancer_obj = Freelancer.objects.get(id=ID)
     context_varible = {
-        'Freelancer':freelancer_obj
+        'freelancer':freelancer_obj
     }
     return render(request,'FreelancerUpdateForm.html',context_varible)
 
