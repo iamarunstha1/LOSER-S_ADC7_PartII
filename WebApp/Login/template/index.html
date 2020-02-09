@@ -8,6 +8,14 @@
 </head>
 <body>
     
+
+ {% if user.is_authenticated %}
+ <li> Hello,{{ user.Name }}</li>
+
+ <li><a href="logout">logout</a></li>
+ 
+ {% endif %}
+
    
     Wel come to Face of Nepal Wepsite!!!!!!!!!!!!!!!!!!!!
 </body>

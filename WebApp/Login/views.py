@@ -30,7 +30,7 @@ def login(request):
 
 def logout(request):
     auth.logout(request)
-    return HttpResponse('Logout')
+    return HttpResponse('logout')
 
 # Signup
 def register(request):

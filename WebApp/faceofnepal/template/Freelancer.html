@@ -22,8 +22,9 @@
 				Description : {{freelancer.Description}}<br>
 								   
 			<br>
-					<div class="form-group"></div>
-					<a href="{% url 'freelancer_edit' freelancer.id %}">Edit</a></a> 
+          <div class="form-group"></div>
+          <a href="{% url 'freelancer_add' %}">Add</a>
+					<a href="{% url 'freelancer_edit' freelancer.id %}">Edit</a>
           <a href="{% url 'freelancer_delete' freelancer.id %}">Delete</a><br>
       <br>
 				{% empty %} 
