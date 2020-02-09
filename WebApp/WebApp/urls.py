@@ -20,5 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('faceofnepal.urls')),
     path('',include('Login.urls')),
+    path('',include('RestAPI.urls')),
+
 
 ]
