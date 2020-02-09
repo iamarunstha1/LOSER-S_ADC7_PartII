@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'faceofnepal',
     'Login',
     'nepal',
-]
+    'RestAPI',
+    ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
