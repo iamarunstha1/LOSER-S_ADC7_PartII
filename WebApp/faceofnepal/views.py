@@ -1,6 +1,8 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from faceofnepal.models import Freelancer,FreelancerForm
+from faceofnepal.forms import FreelancerForms
+
 # Create your views here.
 def index(requst):
     return HttpResponse("hello world")
@@ -38,7 +40,7 @@ def freelancer_edit(request, ID):
     }
     return render(request,'FreelancerUpdateForm.html',context_varible)
 
-def freelancer_update_save(request,ID):
+def freelancer_update_saves(request,ID):
     freelancer_obj = Freelancer.objects.get(id=ID)
     freelancer_form_data = request.POST
     print(freelancer_form_data) 
@@ -49,8 +51,19 @@ def freelancer_update_save(request,ID):
     freelancer_obj.save()
     return HttpResponse("Record Updated!!!!")
 
+def freelancer_update_save(request,ID):
+    freelancer_obj = Freelancer.objects.get(id=ID)
+    form=FreelancerForms(request.POST, instance = freelancer_obj)
+    if form.is_valid():
+        form.save()
+        return redirect("/freelancerlist")
+    return render(request,"FreelancerUpdateForm.html",{'freelancer_obj':freelancer_obj})
+
+
 
 def freelancer_delete(request,ID):
         freelancer_obj= Freelancer.objects.get(id=ID)
         freelancer_obj.delete()
         return HttpResponse("Record Delete!!")
+
+
