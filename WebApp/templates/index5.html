@@ -1,0 +1,108 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FACEOFNEPAL</title>
+	<link href="{% static 'https://fonts.googleapis.com/css?family=Roboto:300i,400,400i,500,500i,700,700i&display=swap' %}" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style5.css' %}">
+</head>
+<body id="body">
+	<section class="container">
+	<header>
+		<h1>FACE OF NEPAL</h1>
+		<div class="logo">
+			<img src="{% static 'images/logo3.jpg' %}">
+		</div>
+		<nav class="Navbar">
+			<ul class="Navbar_item">
+				<li class="active"><a href="{% static 'index5.html' %}">Home</a></li>
+				<li><a href="{% static 'aboutus.html' %}">About Us</a></li>
+				<li><a href="{% static 'destination.html' %}">Destination</a></li>
+				<li><a href="{% static 'gallery.html' %}">Gallery</a></li>
+				<li><a href="{% static 'contact.html' %}">Contact Us</a></li>
+			</ul>
+			<div id="btn-close">
+				<i class="fas fa-times"></i>
+			</div>
+		</nav>
+		<div id="toggle-btn">
+			<i class="fas fa-bars"></i>
+		</div>
+		<div id="clock"></div>
+<script>
+setInterval(displayclock,500);
+function displayclock(){
+
+var today=new Date();
+var hrs=today.getHours();
+var min=today.getMinutes();
+var sec=today.getSeconds();
+var en='AM';
+
+if(hrs>12){
+	en='PM';
+	
+}
+	
+if(hrs>12){
+hrs=hrs-12;
+}
+
+if(hrs==0){
+hrs=12;
+}
+
+if(hrs<10)
+{
+		hrs='0' +hrs;
+}
+
+if(min<10)
+{
+		min='0' +min;
+}
+
+if(sec<10)
+{
+		sec='0' +sec;
+}
+
+
+document.getElementById('clock').innerHTML= hrs+ ':'+ min +':' + sec + ' '+ en;
+
+}
+
+</script>
+	<form action="/searchlist/" method="POST">
+		{% csrf_token %}
+		<div class="wrap">
+		<div class="search">
+			<input type="text" class="searchterm" name="input" placeholder="Search here...">
+			<button type="submit" class="search-btn">Search</button>
+			
+				
+			</form>        
+		</div>
+		</div>
+		</header>
+	</section>
+
+
+
+<footer>
+
+	  copyright &copy; FACEOFNEPAL
+
+
+</footer>
+<script src="{% static 'app.js' %}"></script>
+</body>
+
+</html>
+
+
+
