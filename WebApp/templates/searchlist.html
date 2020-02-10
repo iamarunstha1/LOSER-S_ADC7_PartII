@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search List</title>
+</head>
+<body>
+    <div>
+        {% for free in results %}
+            freelancer name : {{free.Name}} <br>
+            freelancer address : {{free.Address}} <br>
+            freelancer phone: {{free.Phone}}
+            
+        {% endfor %}
+    </div>
+</body>
+</html>

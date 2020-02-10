@@ -1,0 +1,45 @@
+h1{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #fff;
+  font-size: 70px;
+}
+}
+.swipe{
+    overflow:auto;
+    white-space:nowrap;
+    width: 100%;
+}
+.container1{
+  width: 800px;
+  margin: auto;
+}
+.everest img{
+  height: 400px;
+  width: 400px;
+}
+.nepal img{
+    width: 15%;
+    height: 10%;
+}
+footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+
+@media screen and (max-width: 1000px)
+{
+
+  ul li
+  {
+    display: block;
+    margin-bottom: 20px; 
+  }
+}
