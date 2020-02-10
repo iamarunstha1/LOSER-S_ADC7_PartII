@@ -34,7 +34,7 @@ def view_get_post_freelancer(request):
             "message":"Successfully posted!!"
         })
     else:
-        return HttpResponse("Other HTTP verbs testing")
+        return HttpResponse("No List Working!!!!!")
 
 @csrf_exempt
 def view_getByID_updateByID_deleteByID(request,ID):
