@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +7,9 @@
   <link rel="stylesheet" type="text/css" href="css\style5.css">
   <link rel="stylesheet" href="css/contact.css">
 </head>
+<br>
+<br>
+<br>
 <body id="body">
   <section class="container">
   <header>
@@ -20,10 +22,11 @@
         <li><a href="aboutus.html">About Us</a></li>
         <li><a href="destination.html">Destination</a></li>
         <li><a href="gallery.html">Gallery</a></li>
-        <li class="active"><a href="contact.html">Contact Us</a></li>
-        <li><a href="freelancer.html">Freelancer Registration</a></li>
+        <li></li><a href="contact.html">Contact Us</a></li>
+        <li class="active"><a href="freelancer.html">Freelancer Registration</a></li>
         <li><a href="login.html">Log In</a></li>
-      </ul>
+    </ul>
+
       <div id="btn-close">
         <i class="fas fa-times"></i>
       </div>
@@ -32,54 +35,25 @@
       <i class="fas fa-bars"></i>
     </div>
 		</header>
-		<h3>If any question</h3>
+		<h3>Join With Us</h3>
 	<div class="contact-section">
+    <br>
+    <br>
+    <br>
 
-  <h1>Contact Us</h1>
+  <h1>Freelancer</h1>
   <form class="contact-form"  method="post">
     <input type="text" class="contact-form-text" id="name" placeholder="Your name">
     <input type="email" class="contact-form-text" id="mail" placeholder="Your email">
-    <input type="text" class="contact-form-text" id="country" placeholder="Your country">
-    <textarea class="contact-form-text" id="message" placeholder="Your message"></textarea>
+    <input type="text" class="contact-form-text" id="country" placeholder="Your place">
+    <textarea class="contact-form-text" id="message" placeholder="Your discriptions"></textarea>
     <input type="submit" class="contact-form-btn" value="Send" onclick="valf()">
   </form>
 </div>
-    <div class="social">
-      <a class="button" href="https://www.facebook.com/supriya.prajapati.75">
-        <i class="fa fa-facebook-f" aria-hidden="true"></i>
-      </a>
-      </a>
-      <a class="button" href="#">
-        <i class="fa fa-google"  aria-hidden="true"></i>
-      </a>
-      <a class="button" href="https://www.instagram.com/supriya.prajapati/">
-        <i class="fa fa-instagram"  aria-hidden="true"></i>
-      </a>
-   </div>
-    <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
-    <script>
-let form= document.getElementById('form')
-form.addEventListener('submit', (e)=>{e.preventDefault()
-let name =
-document.getElementById('name')
-let email =
-document.getElementById('email')
-let country =
-document.getElementById('country')
-let message =
-document.getElementById('message')
+    
+
   
   
-  let data = {
-	  'name':name.value,
-	  'email':email.value,
-	  'country':country.value,
-	  'message':message.value
-  }
-  let str=JSON.stringify(data)
-  localStorage.setItem(localStorage.length+1,str)
-  e.target.reset()
-});
 </script>
 <footer>
 	  copyright &copy; FACEOFNEPAL
