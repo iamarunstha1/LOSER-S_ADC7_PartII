@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FACEOFNEPAL</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style5.css">
+  <link rel="stylesheet" type="text/css" href="css/gallery.css">
+</head>
+<body id="body">
+  <header>
+    <h1>Gallery</h1>
+    <div class="logo">
+      <img src="images/logo3.jpg">
+    </div>
+   <nav class="Navbar">
+      <ul class="Navbar_item">
+        <li><a href="index5.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="destination.html">Destination</a></li>
+        <li class="active"><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="freelancer.html">Freelancer Registration</a></li>
+        <li><a href="login.html">Log In</a></li>
+      </ul>
+      <div id="btn-close">
+        <i class="fas fa-times"></i>
+      </div>
+    </nav>
+    <div id="toggle-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+      </header>
+      <hr>
+      <div class="slideshow" style="max-width: 2000px">
+        
+          <img class="slides" src="images/img1.jpg" style="width: 100%" "height: 100%">
+          <img class="slides" src="images/img2.jpg" style="width: 100%" "height: 100%">
+          <img class="slides" src="images/img3.jpg" style="width: 100%" "height: 100%">
+          <img class="slides" src="images/img4.jpg" style="width: 100%" "height: 100%">
+          <img class="slides" src="images/img5.jpg" style="width: 100%" "height: 100%">
+      </div>
+          <script>
+            var index = 1;
+  function plusIndex(n){
+    index = index + n;
+    showImage(index);
+  }
+  showImage(1);
+  function showImage(n){
+    var i;
+    var x = document.getElementsByClassName("slides");
+    if(n > x.length){ index = 1};
+    if(n < 1){ index = x.length};
+    for (i=0;i<x.length;i++)
+    {
+      x[i].style.display = "none";
+
+    }
+    x[index-1].style.display="block";
+  }
+  autoSlide();
+  function autoSlide(){
+    var i;
+    var x = document.getElementsByClassName("slides");
+    for(i=0;i<x.length;i++)
+    {
+      x[i].style.display="none";
+    }
+    if(index > x.length){index = 1}
+    x[index-1].style.display="block";
+    index++;
+    setTimeout(autoSlide,2000);
+
+  }
+            
+          </script>
+        
+        <section id="section">
+          <figure>
+          <img src="images/g1.jpg">
+          <img src="images/g2.jpg">
+          <img src="images/g3.jpg">
+        </figure>
+        <figure>
+          <img src="images/g4.jpg">
+          <img src="images/g5.jpg">
+          <img src="images/g6.jpg">
+        </figure>
+        <figure>
+          <img src="images/g7.jpg">
+          <img src="images/g8.jpg">
+          <img src="images/g9.jpg">
+        </figure>
+        <figure>
+          <img src="images/g10.jpg">
+          <img src="images/g11.jpg">
+          <img src="images/g12.jpg">
+        </figure>
+        <figure>
+          <img src="images/g13.jpg"> 
+          <img src="images/g14.jpg"> 
+          <img src="images/g15.jpg">
+        </figure>
+               
+        </section>
+
+<footer>
+    copyright &copy; Visit Nepal
+
+
+</footer>
+<script src="app.js"></script>
+
+</body>
+</html>
