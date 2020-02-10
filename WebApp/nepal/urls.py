@@ -7,8 +7,9 @@ from nepal.views import search
 from nepal.views import searchresults
 
 urlpatterns = [
-    path("index5/", index5, name="index"),
+    path("index5/",index5, name="index"),
     #path("aboutus/", aboutus, name="aboutus")
     path('search/',search),
     path('searchlist/',searchresults),
+
     ]

@@ -8,7 +8,7 @@ from django.contrib import messages
 # Create your views here.
 #Login
 def index(request):
-    return render(request,'index.html',)
+    return render(request,'index5.html',)
 
 def login(request):
     if request.method== 'POST':
@@ -18,7 +18,7 @@ def login(request):
         user= auth.authenticate(username=username,password=password)
         if user is not None:
             auth.login(request,user)
-            return render(request,'index.html')
+            return render(request,'index5.html')
         else:
             messages.info(request,"invalid username")
             return redirect('login')
@@ -30,7 +30,7 @@ def login(request):
 
 def logout(request):
     auth.logout(request)
-    return HttpResponse('logout')
+    return render(request,'index5.html')
 
 # Signup
 def register(request):
@@ -44,21 +44,18 @@ def register(request):
         password2 = request.POST['password2']
         
         if password1==password2:
-            if User.objects.filter(username=username).exists():
-                messages.info(request,'username Taken')
-                return render(request,'registerForm.html')
-            elif User.objects.filter(email=email).exists():
-                messages.info(request,'email taken')
+            if User.objects.filter(email=email).exists():
+                messages.info(request,'this email is already used plz enter another email')
                 return render(request,'registerForm.html')
             else:
              user =User.objects.create_user(username=username,password=password1,email=email,first_name=first_name,last_name=last_name)
              user.save()
-             print('user created')
+             print('successfully create user.........')
              return redirect('login')
              
         else:
-            messages.info(request,'password not matching')
+            messages.info(request,'password not matching plz enter same password.')
             return render(request,'registerForm.html')
-        return render(request,'index.html')
+        return render(request,'index5.html')
     else:
         return render(request,'registerForm.html')

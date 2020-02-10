@@ -1,89 +1,24 @@
-{% load static %}
 <DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-   <!--bootstrap-css-->
-    <link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap4/bootstrap.min.css' %}">
-    
-    <title>FACEOFNEPAL</title>
-    <link href="{% static 'https://fonts.googleapis.com/css?family=Roboto:300i,400,400i,500,500i,700,700i&display=swap' %}" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style5.css' %}">
+ <head>
+    <title>FACEOFNEPAl</title>
   </head>
   <body id="body">
-    <section class="container">
-    <header>
-      <div class="logo">
-        <img src="{% static 'images/logo3.jpg' %}">
-      </div>
-      <nav class="Navbar">
-        <ul class="Navbar_item">
-          <li></li><a href="{% static 'index5.html' %}">Home</a></li>
-          <li><a href="{% static 'aboutus.html' %}">About Us</a></li>
-          <li><a href="{% static 'destination.html' %}">Destination</a></li>
-          <li><a href="{% static 'gallery.html' %}">Gallery</a></li>
-          <li><a href="{% static 'contact.html' %}">Contact Us</a></li>
-          <li><a href="{% static 'freelancer.html' %}">Freelancer Registration</a></li>
-          <li class="active"><a href="login.html">Log In</a></li>
-        </ul>
-        <div id="btn-close">
-          <i class="fas fa-times"></i>
-        </div>
-      </nav>
-      
-</head>
-<body>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  
-    <div class="container">
-        
+    
         <form action="" class="was-validated" method="POST">
           {% csrf_token %}
           <div class="form-group">
             <label for="uname">Username:</label>
             <input type="text" class="form-control" id="uname" placeholder="Enter username" name="username" required>
-            <div class="valid-feedback">Valid.</div>
-            <div class="invalid-feedback">Please fill out this field.</div>
           </div>
           <div class="form-group">
             <label for="pwd">Password:</label>
             <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password" required>
-            <div class="valid-feedback">Valid.</div>
-            <div class="invalid-feedback">Please fill out this field.</div>
           </div>
           
           <button type="submit" class="btn btn-primary">Login</button>
         </form>
       </div>  
 </body>
-<div> 
-  {% for message in messages %}
-  <h6> {{message}} </h6>
-  {% endfor %}
-</div>
-    
-<script src="{% static 'js/jquery-3.2.1.min.js'%}"></script>
-<script src="{% static 'styles/bootstrap4/popper.js' %}"></script>
-<script src="{% static 'styles/bootstrap4/bootstrap.min.js' %}"></script>
 
 </html>

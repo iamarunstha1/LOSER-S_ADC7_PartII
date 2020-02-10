@@ -9,6 +9,8 @@
 	<link href="{% static 'https://fonts.googleapis.com/css?family=Roboto:300i,400,400i,500,500i,700,700i&display=swap' %}" rel="stylesheet">
 	<link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/style5.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body id="body">
 	<section class="container">
@@ -20,12 +22,23 @@
 		<nav class="Navbar">
 			<ul class="Navbar_item">
 				<li class="active"><a href="{% static 'index5.html' %}">Home</a></li>
-				<li><a href="{% static 'aboutus.html' %}">About Us</a></li>
-				<li><a href="{% static 'destination.html' %}">Destination</a></li>
-				<li><a href="{% static 'gallery.html' %}">Gallery</a></li>
-				<li><a href="{% static 'contact.html' %}">Contact Us</a></li>
-				<li><a href="{% static 'freelancer.html' %}">Freelancer Registration</a></li> 
-				<li><a href="{% static 'login.html' %}">Log In</a></li>
+				<a href="{% static 'aboutus.html' %}">About Us</a>
+				<a href="{% static 'destination.html' %}">Destination</a>
+				<a href="{% static 'gallery.html' %}">Gallery</a>
+				<a href="{% static 'contact.html' %}">Contact Us</a>
+				<div class="dropdown">
+				<button class="dropbtn">Freelancer 
+					<i class="fa fa-caret-down"></i>
+				  </button>
+				  <div class="dropdown-content">
+					<a href="/freelancerform/">FreelancerForm</a>
+					<a href="/freelancerlist/">FreelancerList</a>
+				  </div>
+				<li><a href="/register/">Registration</a></li> 
+				<li><a href="/login/">Log In</a></li>
+				{% if user.is_authenticated %}
+ 				<li><a href="logout">logout</a></li>
+ 					{% endif %}
 			</ul>
 			<div id="btn-close">
 				<i class="fas fa-times"></i>
@@ -95,7 +108,52 @@ document.getElementById('clock').innerHTML= hrs+ ':'+ min +':' + sec + ' '+ en;
 		</header>
 	</section>
 
-
+	<style>
+		
+		.dropdown {
+		  float: left;
+		  overflow: hidden;
+		}
+		
+		.dropdown .dropbtn {
+		  font-size: 16px;  
+		  border: none;
+		  outline: none;
+		  color: white;
+		  padding: 14px 16px;
+		  background-color: inherit;
+		  font-family: inherit;
+		  margin: 0;
+		}
+		
+		
+		
+		.dropdown-content {
+		  display: none;
+		  position: absolute;
+		  background-color: #f9f9f9;
+		  min-width: 160px;
+		  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		  z-index: 1;
+		}
+		
+		.dropdown-content a {
+		  float: none;
+		  color: black;
+		  padding: 12px 16px;
+		  text-decoration: none;
+		  display: block;
+		  text-align: left;
+		}
+		
+		.dropdown-content a:hover {
+		  background-color: #ddd;
+		}
+		
+		.dropdown:hover .dropdown-content {
+		  display: block;
+		}
+		</style>
 
 <footer>
 
